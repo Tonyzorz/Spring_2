@@ -14,8 +14,14 @@
     <th>age</th>
     </thead>
     <tbody>
-    <c:forEach var="item" items=""
-    <%
+    <c:forEach var="item" items="${members}">
+        <tr>
+            <td>${item.id}</td>
+            <td>${item.username}</td>
+            <td>${item.age}</td>
+        </tr>
+    </c:forEach>
+<%--    <%
         for (Member member : members) {
             out.write(" <tr>");
             out.write(" <td>" + member.getId() + "</td>");
@@ -23,7 +29,7 @@
             out.write(" <td>" + member.getAge() + "</td>");
             out.write(" </tr>");
         }
-    %>
+    %>--%>
     </tbody>
 </table>
 </body>
